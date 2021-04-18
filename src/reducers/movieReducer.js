@@ -1,12 +1,12 @@
 import constants from '../constants/actionTypes'
 
-var initialState = {
+let initialState = {
     movies: [],
     selectedMovie: null
 }
 
-export default (state = initialState, action) => {
-    var updated = Object.assign({}, state);
+const movieReducer =  (state = initialState, action) => {
+    let updated = Object.assign({}, state);
 
     switch(action.type) {
         case constants.FETCH_MOVIES:
@@ -23,3 +23,4 @@ export default (state = initialState, action) => {
             return state;
     }
 }
+export default movieReducer;
