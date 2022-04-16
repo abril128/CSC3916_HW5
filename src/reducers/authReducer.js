@@ -5,9 +5,9 @@ let initialState = {
     username: localStorage.getItem('username') ? localStorage.getItem('username') : ''
 }
 
-const authReducer = (state = initialState, action) => {
+export default  (state = initialState, action) => {
 
-    var updated = Object.assign({}, state);
+    const updated = Object.assign({}, state);
 
     switch (action.type) {
         case constants.USER_LOGGEDIN:
@@ -25,4 +25,3 @@ const authReducer = (state = initialState, action) => {
     }
 }
 
-export default authReducer

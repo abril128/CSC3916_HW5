@@ -5,7 +5,8 @@ let initialState = {
       selectedMovie: null
 }
 
-const movieReducer = (state = initialState, action) => {
+export default (state = initialState, action) => {
+
       let updated = Object.assign({}, state);
 
       switch(action.type) {
@@ -24,4 +25,3 @@ const movieReducer = (state = initialState, action) => {
       }
 }
 
-export default movieReducer;

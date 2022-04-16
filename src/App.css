@@ -1,13 +1,13 @@
 .App {
   text-align: center;
-  background-color: #222;
+  background-color: #778899;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+/* Glyphicons*/
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -15,14 +15,15 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #FFDAB9;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: #FAFAD2;
 }
 
 .App-title {
   font-size: 1.5em;
+  color: #FFA07A;
 }
 
 .App-intro {
@@ -34,6 +35,7 @@
 }
 
 .form-horizontal {
+  color: #FFA07A;
   width: 40% !important;
   margin-left: 30%
 }
