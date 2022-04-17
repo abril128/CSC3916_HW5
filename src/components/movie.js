@@ -51,21 +51,21 @@ class Movie extends Component {
     }
 
     render() {
-        const ActorInfo = ({actors}) => {
-            return actors.map((actor, i) =>
+        const ActorInfo = ({actorsName}) => {
+            return actorsName.map((actor, i) =>
                 <p key={i}>
                     <b>{actor.actorName}</b> {actor.characterName}
                 </p>
-            );
-        };
+            )
+        }
 
         const ReviewInfo = ({reviews}) => {
             return reviews.map((review, i) =>
                 <p key={i}>
-                    <b>{review.reviewer}</b> {review.quote} &nbsp;&nbsp;&nbsp;
+                    <b>{review.username}</b> {review.review} &nbsp;&nbsp;&nbsp;
                     <Glyphicon glyph={'star'} /> {review.rating}
                 </p>
-            );
+            )
         }
 
         const ReviewForm = ({currentMovie}) => {
@@ -122,7 +122,7 @@ class Movie extends Component {
                     <Panel.Body><ReviewInfo reviews={currentMovie.reviews} /></Panel.Body>
                 </Panel>
             );
-        };
+        }
         return (
             <div>
                 <DetailInfo currentMovie={this.props.selectedMovie} />
@@ -136,8 +136,9 @@ const mapStateToProps = (state, ownProps) => {
     console.log(ownProps);
     return {
         selectedMovie: state.movie.selectedMovie,
-        movieId: ownProps.match.params.movieId
+        title: ownProps.match.params.title
     }
 }
 
 export default withRouter(connect(mapStateToProps)(Movie));
+

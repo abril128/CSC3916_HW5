@@ -18,7 +18,7 @@ class App extends Component {
                 <MovieHeader />
                 <Route exact path="/" render={()=><MovieList />}/>
                 <Route path="/movielist" render={()=><MovieList />}/>
-                <Route path="/movie/:movieId" render={()=><Movie />}/>
+                <Route path="/movie/:Movie_title" render={()=><Movie />}/>
                 <Route path="/signin" render={()=><Authentication />}/>
               </div>
             </HashRouter>
