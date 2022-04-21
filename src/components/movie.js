@@ -51,22 +51,29 @@ class Movie extends Component {
     }
 
     render() {
-        const ActorInfo = ({actorsName}) => {
-            return actorsName.map((actor, i) =>
+
+        const ActorInfo = ({ actors }) => {
+            if (!actors) {
+                return null;
+            }
+            return actors.map((actor, i) => (
                 <p key={i}>
                     <b>{actor.actorName}</b> {actor.characterName}
                 </p>
-            )
-        }
+            ));
+        };
 
-        const ReviewInfo = ({reviews}) => {
-            return reviews.map((review, i) =>
+        const ReviewInfo = ({ reviews }) => {
+            if (!reviews) {
+                return null;
+            }
+            return reviews.map((review, i) => (
                 <p key={i}>
-                    <b>{review.username}</b> {review.review} &nbsp;&nbsp;&nbsp;
-                    <Glyphicon glyph={'star'} /> {review.rating}
+                    <b>{review.reviewer}</b> {review.quote}
+                    <Glyphicon glyph={"star"} /> {review.rating}
                 </p>
-            )
-        }
+            ));
+        };
 
         const ReviewForm = ({currentMovie}) => {
             return (
